@@ -4,16 +4,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>
         <img class="logoh1" src="Preview/Plan de travail 1.png" alt="Image logo">
         <a class="hdr" href="inventaire.html"> Inventaire </a>
         <a class="hdr" href="https://discord.gg/BKstb7fBHRsss"> Discord </a>
     </h1>
     <div class="ovrt">
-        <button onclick="ouvrirPack()">Ouvrir Un Pack !</button>
-        <div id="cartesinv"></div>
+        <button class="btn5" id="ouvrirPackButton">Ouvrir Un Pack !</button>
     </div>
+    <div id="cartesContainer"></div>
+
+    
+    <img onclick="afficherContenu()" class="btnecg" src="img/echange.png" alt="btn echange">
+   
+    <div class="btnflott" id="btnflott">
+        <form id="echangecrt">
+            <div class="ecg">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="ecg">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="choixCarte">Choix de votre carte a echanger :</label>
+                <select id="choixCarte" name="choixCarte" required>
+                    <option value="Rare">Rare</option>
+                    <option value="Epic">Epic</option>
+                    <option value="Legendaire">Légendaire</option>
+                </select>
+            </div>
+            <button class="btn" type="submit">Envoyer demande</button>  
+        </form>
+    </div>
+
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     <footer>TEST</footer>
+    
     <script src="JS/script2.js"></script>
+    
 </body>
 </html>
+
+
