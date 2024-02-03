@@ -86,12 +86,27 @@ h1 {
 }
 
 footer {
-  display: flex;
   width: 100%;
-  height: 5%;
+  height: auto;
   background-color: #333;
   color: #fff;
   margin-top: auto;
+}
+.link{
+  height: 1%;
+  width: 50%;
+}
+
+.linktolink{
+  text-decoration: none;
+  color: #ffffff;
+  &:hover {
+    color: gray;
+  }
+}
+.footercontent{
+  display: flex;
+  justify-content: space-around;
 }
 
 .logoh1{
@@ -111,6 +126,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10%;
   width: 100px;
   height: 70px;
   background-color: #333;
@@ -133,6 +149,7 @@ footer {
 .carte {
   width: 100px;
   margin: 50px; 
+
 }
 
 .carte img {
