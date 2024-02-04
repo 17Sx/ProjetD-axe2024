@@ -92,10 +92,7 @@ footer {
   color: #fff;
   margin-top: auto;
 }
-.link{
-  height: 1%;
-  width: 50%;
-}
+
 
 .linktolink{
   text-decoration: none;
@@ -152,14 +149,7 @@ footer {
 
 }
 
-.carte img {
-  width: 150px; 
-  height: auto;
-  border: 5px solid #000000; 
-  box-sizing: border-box; 
-
-}
-.center {
+center{
   height: 80vw;
   width: 80vw;
   }
@@ -199,4 +189,36 @@ footer {
   &:hover {
     background-color: gray;
   }
+  }
+
+
+
+.carte img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #000000; 
+    box-sizing: border-box; 
+    border-radius: 5px;
+}
+
+
+
+
+.favori-button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover {
+      background-color: gray;
+    }
+
+}
+
+.carte.favori {
+  border: 5px solid gold;   
+  border-radius: 5px;
+  
   }

@@ -12,29 +12,34 @@
 
     const cartes = {
         Rare: [
-            { image: 'img/carte1a.png', obtenue: false },
-            { image: 'img/carte1b.png', obtenue: false },
-            { image: 'img/carte1c.png', obtenue: false },
-            { image: 'img/carte1d.png', obtenue: false },
-            { image: 'img/carte1e.png', obtenue: false },
-            { image: 'img/carte1f.png', obtenue: false },
-            { image: 'img/carte1g.png', obtenue: false },
-            { image: 'img/carte1h.png', obtenue: false },
-            { image: 'img/carte1i.png', obtenue: false },
+            { image: 'img/carte1a.png', obtenue: false,maison: 'Gryffondor'},
+            { image: 'img/carte1b.png', obtenue: false,maison: 'Gryffondor'},
+            { image: 'img/carte1c.png', obtenue: false,maison: 'Gryffondor'},
+            { image: 'img/carte1d.png', obtenue: false,maison: 'Serpentard'},
+            { image: 'img/carte1e.png', obtenue: false,maison: 'Gryffondor'},
+            { image: 'img/carte1f.png', obtenue: false,maison: 'Gryffondor'},
+            { image: 'img/carte1g.png', obtenue: false,maison: 'Serdaigle'},
+            { image: 'img/carte1h.png', obtenue: false,maison: 'Serpentard'},
+            { image: 'img/carte1i.png', obtenue: false,maison: 'Gryffondor'},
+            { image: 'img/carte1j.png', obtenue: false,maison: 'Poufsouffle'},
+            { image: 'img/carte1k.png', obtenue: false,maison: 'Poufsouffle'},
         ],
         Epic: [
-            { image: 'img/carte2a.png', obtenue: false },
-            { image: 'img/carte2b.png', obtenue: false },
-            { image: 'img/carte2d.png', obtenue: false },
-            { image: 'img/carte2c.png', obtenue: false },
-            { image: 'img/carte2e.png', obtenue: false },
-            { image: 'img/carte2f.png', obtenue: false },
+            { image: 'img/carte2a.png', obtenue: false,maison: 'Gryffondor' },
+            { image: 'img/carte2b.png', obtenue: false,maison: 'Gryffondor' },
+            { image: 'img/carte2d.png', obtenue: false,maison: 'Gryffondor' },
+            { image: 'img/carte2c.png', obtenue: false,maison: 'Serpentard' },
+            { image: 'img/carte2e.png', obtenue: false,maison: 'Gryffondor' },
+            { image: 'img/carte2f.png', obtenue: false,maison: 'Serpentard' },
+            { image: 'img/carte2g.png', obtenue: false,maison: 'Pouffsoufle' },
+            { image: 'img/carte2h.png', obtenue: false,maison: 'Serdaigle' },
         ],
         Legendaire: [
-        { image: 'img/carte3a.png', obtenue: false },
-        { image: 'img/carte3b.png', obtenue: false },
-        { image: 'img/carte3c.png', obtenue: false },
-        { image: 'img/carte3d.png', obtenue: false },
+        { image: 'img/carte3a.png', obtenue: false,maison: 'Gryffondor' },
+        { image: 'img/carte3b.png', obtenue: false,maison: 'Gryffondor' },
+        { image: 'img/carte3c.png', obtenue: false,maison: 'Serpentard' },
+        { image: 'img/carte3d.png', obtenue: false,maison: 'Serpentard' },
+        { image: 'img/carte3e.png', obtenue: false,maison: 'Serdaigle' },
         ],
     };
 
@@ -67,21 +72,21 @@
 
         cartesinv.innerHTML = '';
 
-    const Rare = genererCarteAleatoire('Rare');
-        const Epic = genererCarteAleatoire('Epic');
-        const Legendaire = genererCarteAleatoire('Legendaire');
+    const rare = genererCarteAleatoire('Rare');
+        const epic = genererCarteAleatoire('Epic');
+        const legendaire = genererCarteAleatoire('Legendaire');
 
-        sauvegarderCartesDansInventaire(Rare);
-        sauvegarderCartesDansInventaire(Epic);
-        sauvegarderCartesDansInventaire(Legendaire);
+        sauvegarderCartesDansInventaire(rare);
+        sauvegarderCartesDansInventaire(epic);
+        sauvegarderCartesDansInventaire(legendaire);
 
-    afficherCarte(Rare);
-        afficherCarte(Epic);
-        afficherCarte(Legendaire);
+    afficherCarte(rare);
+        afficherCarte(epic);
+        afficherCarte(legendaire);
 
-        cartesGenerees.Rare.push(Rare);
-        cartesGenerees.Epic.push(Epic);
-        cartesGenerees.Legendaire.push(Legendaire);
+        cartesGenerees.Rare.push(rare);
+        cartesGenerees.Epic.push(epic);
+        cartesGenerees.Legendaire.push(legendaire);
 
         localStorage.setItem('derniereOuverture', new Date());
     }
