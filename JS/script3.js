@@ -4,11 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const inventaireDiv = document.getElementById('cartesContainer');
 
+//Fonction pour afficher les cartes dans la page inventaire.html
+
 function afficherCartesDansInventaire() {
     const cartesInventaire = JSON.parse(localStorage.getItem('cartesInventaire')) || [];
     inventaireDiv.innerHTML = '';
 
     cartesInventaire.forEach((carte) => {
+        
         const carteinfo = document.createElement('div');
         carteinfo.classList.add('carte');
 
@@ -28,6 +31,8 @@ favoriButton.addEventListener('click', () => basculerFavori(carte));
         inventaireDiv.appendChild(carteinfo);
     });
 }
+
+//Fonction pour faire en sorte que quand on clique sur le bouton FAV ça les ajoutes dans les favoris
 
 function basculerFavori(carte) {
     carte.favori = !carte.favori;

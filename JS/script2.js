@@ -10,6 +10,8 @@
 
     });
 
+//Envoie des cartes + leurs maison + Si elles sont obtenues ou non
+
     const cartes = {
         Rare: [
             { image: 'img/carte1a.png', obtenue: false,maison: 'Gryffondor'},
@@ -43,11 +45,6 @@
         ],
     };
 
-    const cartesGenerees = {
-        Rare: [],
-        Epic: [],
-        Legendaire: [],
-    };
 
     const cartesinv = document.getElementById('cartesContainer');
 
@@ -60,6 +57,8 @@
             localStorage.setItem('cartesInventaire', JSON.stringify(cartesInventaire));
         }
     }
+
+//Fonction pour ouvrir un pack
 
     function ouvrirPack(event) {
         event.preventDefault();
@@ -81,7 +80,7 @@
         sauvegarderCartesDansInventaire(legendaire);
 
     afficherCarte(rare);
-        afficherCarte(epic);
+    afficherCarte(epic);
         afficherCarte(legendaire);
 
         cartesGenerees.Rare.push(rare);
@@ -90,6 +89,8 @@
 
         localStorage.setItem('derniereOuverture', new Date());
     }
+
+    //Generer les carte en aleatoires 
 
     function genererCarteAleatoire(rarete) {
     const cartesrare = cartes[rarete].filter(carte => !carte.obtenue);
@@ -105,6 +106,8 @@
         return { carte: carteAleatoire.image, rarete: rarete };
     }
 
+//Pour afficher les cartes
+
     function afficherCarte(carte) {
         const carteinfo = document.createElement('div');
         carteinfo.classList.add('carte');
@@ -116,11 +119,14 @@
         cartesContainer.appendChild(carteinfo);
     }
     
+    //Pour les demmandes d'echanges
 
     function afficherContenu() {
         var contenu = document.getElementById("btnflott");
         contenu.style.display = "block";
     }
+
+//Envoie la demmande dans la console
 
     function envoyerDemande(event) {
         event.preventDefault();
