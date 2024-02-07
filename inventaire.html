@@ -10,6 +10,17 @@
         <a class="hdr" href="https://discord.gg/3x3kGZTbC7"> Discord </a>
     </h1>
 
+    <div>
+        <label for="choixMaison">Choix de la maison :</label>
+        <select id="choixMaison" name="choixMaison">
+            <option value="">Toutes les maisons</option>
+            <option value="Gryffondor">Gryffondor</option>
+            <option value="Serpentard">Serpentard</option>
+            <option value="Serdaigle">Serdaigle</option>
+            <option value="Poufsouffle">Poufsouffle</option>
+        </select>
+    </div>
+
     <div class="center" id="cartesContainer"></div>
 
     <img onclick="afficherContenu()" class="btnecg" src="img/echange.png" alt="btn echange">
@@ -25,7 +36,7 @@
             </div>
             <div>
                 <label for="choixCarte">Choix de votre carte a echanger :</label>
-                <select id="choixCarte" name="choixCarte" required>
+                <select id="choixMaison" name="choixMaison">
                     <option value="Rare">Rare</option>
                     <option value="Epic">Epic</option>
                     <option value="Legendaire">Légendaire</option>
