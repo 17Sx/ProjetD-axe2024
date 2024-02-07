@@ -8,6 +8,7 @@
         const echangeForm = document.getElementById('echangecrt');
         echangeForm.addEventListener('submit', envoyerDemande);
 
+        const tag = ""
     });
 
 //Envoie des cartes + leurs maison + Si elles sont obtenues ou non
@@ -44,6 +45,8 @@
         { image: 'img/carte3e.png', obtenue: false,maison: 'Serdaigle' },
         ],
     };
+
+
 
 
     const cartesinv = document.getElementById('cartesContainer');
@@ -93,25 +96,34 @@
     //Generer les carte en aleatoires 
 
     function genererCarteAleatoire(rarete) {
-    const cartesrare = cartes[rarete].filter(carte => !carte.obtenue);
+        const cartesrare = [];
+        
+        for (const carte of cartes[rarete]) {
+        if (!carte.obtenue) {
+            cartesrare.push(carte);
+        }
+        }
+    
         if (cartesrare.length === 0) {
-            
-            for (const rarete in cartes) {
-            cartes[rarete].forEach(carte => carte.obtenue = false);
+        for (const rarete in cartes) {
+            for (const carte of cartes[rarete]) {
+            carte.obtenue = false;
             }
         }
-
-        const carteAleatoire = cartesrare[Math.floor(Math.random() * cartesrare.length)];
-    carteAleatoire.obtenue = true;
-        return { carte: carteAleatoire.image, rarete: rarete };
+        }
+    
+        const indexAleatoire = Math.floor(Math.random() * cartesrare.length);
+        const carteAleatoire = cartesrare[indexAleatoire];
+        carteAleatoire.obtenue = true;
+    
+        return { carte: carteAleatoire.image};
     }
-
 //Pour afficher les cartes
 
     function afficherCarte(carte) {
         const carteinfo = document.createElement('div');
         carteinfo.classList.add('carte');
-        const imageinfo = document.createElement('img');
+        const imageinfo = document.createElement('img'); 
         imageinfo.src = carte.carte;
         carteinfo.appendChild(imageinfo);
 
@@ -145,3 +157,26 @@
         var contenu = document.getElementById("btnflott")
         contenu.style.display = "block";
     }
+//function filtre
+
+
+
+//function filtre
+let choixMaison = document.getElementById('choixMaison');
+choixMaison.addEventListener("change", function () {
+    const tag = choixMaison.value;
+
+
+    cartesinv.innerHTML = '';
+
+    
+    for (const rarete in cartes) {
+        for (const carte of cartes[rarete]) {
+            if (tag === "" || carte.maison === tag) {
+                afficherCarte({ carte: carte.image,});
+            }
+        }
+    }
+});
+
+
