@@ -3,6 +3,19 @@ html, body {
   margin: 0;
 }
 
+.nomCartePageIndex2{
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #000000;
+  background-color: #d6ab88;
+  border-radius: 24px;
+  border-radius: 24px;
+  -moz-border-radius: 24px;
+  border: 1px solid #ffffff;
+  box-shadow: 3px 3px 8px #000000;
+  }
+
 body {
   background-image: url(Preview/Back.png);
   background-size: cover;

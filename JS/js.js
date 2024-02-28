@@ -11,3 +11,9 @@ function validatePassword() {
 }
 passwordInput.addEventListener('input', validatePassword);
 
+
+
+let inscriptionButton = document.getElementById('inscriptionButton');
+inscriptionButton.addEventListener('click', function() {
+    window.location.href = 'index2.html';
+});     
