@@ -1,0 +1,251 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+/*Permet de modifier le visuel des cartes*/
+.nomCartePage2{
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #000000;
+  background-color: #d6ab88;
+  border-radius: 24px;
+  border-radius: 24px;
+  -moz-border-radius: 24px;
+  border: 1px solid #ffffff;
+  box-shadow: 3px 3px 8px #000000;
+  }
+/*Body*/
+body {
+  background-image: url(Preview/Back.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #acacac;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+/*Formulaire d'inscription*/
+form {
+  width: 400px;
+  height: 300px;
+  opacity: 90%;   
+  background-color: #d6ab88;
+  padding: 40px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  margin-top: 200px;
+  border-radius: 20px;
+}
+
+/*Permet de modifier les form*/
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+/*Tout les section email dans les forms*/
+input[type="text"], input[type="email"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #666565;
+  border-radius: 100px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+/*Toute les sections mdp dans les forms*/
+input[type="password"], input[type="mdp"], select{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  box-sizing: border-box;
+  font-size: 14px;
+
+}
+
+/*Modifie les bouton pour s'inscrire et envoyer demmande d'echange */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  &:hover{
+    color: gray;
+    transition: all 5;
+  }
+}
+
+/*Modifie le header*/
+h1 {
+  display: flex; 
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  color: #fff;
+  margin: 0;  
+}
+
+
+/*Modifie le footer*/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  color: #fff;
+  margin-top: auto;
+}
+
+
+.linktolink{
+  text-decoration: none;
+  color: #ffffff;
+  &:hover {
+    color: gray;
+  }
+}
+
+/*Modifie l'espace entre les objet du footer*/
+.footercontent{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/*Taille du logo dans le header*/
+.logoh1{
+  width: 200px;
+  height: 100px;
+}
+
+/*Pack booster affichée sur la page index2*/
+.ovrt{
+  height: 500px;
+  width: 600px;
+  background-image: url(img/Booster.png);
+  margin-top: 9%;
+}
+
+
+/*Bouton dans le Header*/
+.hdr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  width: 100px;
+  height: 70px;
+  background-color: #333;
+  font-size: medium;
+  margin-left: 80px;
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  &:hover {
+    background-color: gray;
+    transition: all 0.5s;
+  }
+}
+/*zone d'affichage de carte*/
+#cartesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*taille des cartes*/
+.carte {
+  width: 100px;
+  margin: 50px; 
+
+}
+/*Ce qui permet de limiter la zone d'affichage des cartes dans l'inventaire*/
+center{
+  height: 80vw;
+  width: 80vw;
+  }
+
+/*bouton pour les echanges*/
+.btnflott {
+    display: none;
+}
+/*bouton pour les echanges*/
+.btnecg {
+  background-color: #d6ab88;
+  border-radius: 80%;
+  height: 5vw;
+  width: auto;
+  padding: 10px;
+  align-self: flex-end; 
+  margin-right: 10px; 
+  border: 4px solid #ffffff;
+  &:hover {
+    background-color: gray;
+    transition: all 0.5s;
+  }
+}
+
+/*bouton pour ouvrir un pack*/
+.btn5 {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #000000;
+  background-color: #d6ab88;
+  border-radius: 24px;
+  border-radius: 24px;
+  -moz-border-radius: 24px;
+  border: 4px solid #ffffff;
+  box-shadow: 3px 3px 8px #444444;
+  &:hover {
+    background-color: gray;
+    transition: all 0.5s;
+  }
+  }
+
+
+/*image des cartes dans l'inventaire*/
+.carte img {
+    background-color: black;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #000000; 
+    box-sizing: border-box; 
+    border-radius: 5px;
+}
+
+
+
+/*bouton favoris*/
+.favori-button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover {
+      background-color: gray;
+      transition: all 0.5s;
+    }
+
+}
+/*affichage des cartes quand ellle sont mis en favoris*/
+.carte.favori {
+  border: 5px solid gold;   
+  border-radius: 5px;
+  
+  }

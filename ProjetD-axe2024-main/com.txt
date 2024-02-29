@@ -1,0 +1,5 @@
+Logo pas visible sur le header
+gris trop light header et footer
+mieux agencer la page au niveau u booster
+moins de carte par ligne (ameliorer visibilité) et le bouton fav
+Ameliorer opacité page verouillage et lisibilité
