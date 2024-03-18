@@ -1,21 +1,26 @@
-html, body {
-  height: 100%;
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
 
-.nomCartePageIndex2{
+main {
+  flex: 1; 
+}
+
+/*Permet de modifier le visuel des cartes*/
+.nomCartePage2{
   text-decoration: none;
   padding: 10px;
   font-size: 0.9em;
-  color: #000000;
-  background-color: #d6ab88;
-  border-radius: 24px;
-  border-radius: 24px;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 24px;   
   -moz-border-radius: 24px;
   border: 1px solid #ffffff;
   box-shadow: 3px 3px 8px #000000;
   }
-
+/*Body*/
 body {
   background-image: url(Preview/Back.png);
   background-size: cover;
@@ -29,21 +34,22 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-}
+  margin: 0px;
+  min-height: 100vh; 
 
+}
+/*Formulaire d'inscription*/
 form {
-  width: 400px;
-  height: 300px;
-  opacity: 90%;   
+  width: 400px;  
   background-color: #d6ab88;
   padding: 40px;
   border: 1px solid #000000;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
   margin-top: 200px;
   border-radius: 20px;
 }
 
+/*Permet de modifier les form*/
 label {
   display: block;
   margin-bottom: 5px;
@@ -51,7 +57,7 @@ label {
   font-weight: bold;
   color: #333;
 }
-
+/*Tout les section email dans les forms*/
 input[type="text"], input[type="email"], select {
   width: 100%;
   padding: 10px;
@@ -61,7 +67,7 @@ input[type="text"], input[type="email"], select {
   box-sizing: border-box;
   font-size: 14px;
 }
-
+/*Toute les sections mdp dans les forms*/
 input[type="password"], input[type="mdp"], select{
   width: 100%;
   padding: 10px;
@@ -73,7 +79,7 @@ input[type="password"], input[type="mdp"], select{
 
 }
 
-
+/*Modifie les bouton pour s'inscrire et envoyer demmande d'echange */
 .btn {
   width: 100%;
   padding: 10px;
@@ -83,27 +89,33 @@ input[type="password"], input[type="mdp"], select{
   border-radius: 100px;
   cursor: pointer;
   font-size: 14px;
+  &:hover{
+    color: gray;
+    transition: all 5;
+  }
 }
 
-input[type="submit"]:hover {
-  background-color: #444;
-}
-
-h1 {
-  display: flex;
+/*Modifie le header*/
+header {
   width: 100%;
-  height: auto;
+  height: 100px;
   background-color: #333;
   color: #fff;
-  margin: 0;  
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center; 
 }
 
+
+/*Modifie le footer*/
 footer {
   width: 100%;
   height: auto;
   background-color: #333;
   color: #fff;
-  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  
 }
 
 
@@ -114,23 +126,34 @@ footer {
     color: gray;
   }
 }
+
+/*Modifie l'espace entre les objet du footer*/
 .footercontent{
   display: flex;
   justify-content: space-around;
 }
 
+
+/*Taille du logo dans le header*/
 .logoh1{
   width: 200px;
   height: 100px;
 }
 
-
+/*Pack booster affichée sur la page index2*/
 .ovrt{
   height: 500px;
   width: 600px;
   background-image: url(img/Booster.png);
   margin-top: 9%;
 }
+
+.commun{
+  margin-right: 100%;
+}
+
+
+/*Bouton dans le Header*/
 
 .hdr {
   display: flex;
@@ -140,39 +163,37 @@ footer {
   width: 100px;
   height: 70px;
   background-color: #333;
-  font-size: medium;
-  margin-left: 80px;
-  margin-top: 10px;
   color: #ffffff;
   text-decoration: none;
+  margin: 50px;
   &:hover {
     background-color: gray;
     transition: all 0.5s;
   }
 }
-
+/*zone d'affichage de carte*/
 #cartesContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .carte {
-  width: 100px;
-  margin: 50px; 
-
+  width: 125px;
+  height: auto;
+  margin: 50px;
+  background-color: #000000;
 }
-
-center{
-  height: 80vw;
-  width: 80vw;
+/*Ce qui permet de limiter la zone d'affichage des cartes dans l'inventaire*/
+.center{
+  width: 70vw;
+  background-color: #ffffff;
   }
 
-
+/*bouton pour les echanges*/
 .btnflott {
     display: none;
 }
-
+/*bouton pour les echanges*/
 .btnecg {
   background-color: #d6ab88;
   border-radius: 80%;
@@ -188,7 +209,7 @@ center{
   }
 }
 
-
+/*bouton pour ouvrir un pack*/
 .btn5 {
   text-decoration: none;
   padding: 10px;
@@ -207,25 +228,27 @@ center{
   }
 
 
-
+/*image des cartes dans l'inventaire*/
 .carte img {
-    max-width: 100%;
-    height: auto;
+    background-color: black;
     border: 5px solid #000000; 
     box-sizing: border-box; 
     border-radius: 5px;
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
 }
 
 
 
-
+/*bouton favoris*/
 .favori-button {
-    background-color: #4285f4;
+    background-color: #000000;
     color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 20px;
     &:hover {
       background-color: gray;
       transition: all 0.5s;
@@ -233,8 +256,6 @@ center{
 
 }
 
-.carte.favori {
-  border: 5px solid gold;   
-  border-radius: 5px;
-  
+  .clicked{
+    color: red;
   }

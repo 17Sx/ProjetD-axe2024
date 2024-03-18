@@ -16,9 +16,9 @@ let ouvrirPackButton = document.getElementById("ouvrirPackButton");
 //permet de generer les cartes en aleatoires depuis l'API
 
 const changeCards = async () => {
-    let response = await fetch('https://hp-api.onrender.com/api/characters', {
+    let response = await fetch('https://hp-api.lainocs.fr/characters/', {
         headers: {
-            'Origin': 'https://hp-api.onrender.com/api/characters'
+            'Origin': 'https://hp-api.lainocs.fr/characters/'
         }
     });
 
@@ -32,7 +32,7 @@ const changeCards = async () => {
         // genere trois indices aléatoires
         let indicesAleatoires = [];
         while (indicesAleatoires.length < 3) {
-            let numAleatoire = Math.floor(Math.random() * 24);
+            let numAleatoire = Math.floor(Math.random() * 30);
             if (!indicesAleatoires.includes(numAleatoire)) {
                 indicesAleatoires.push(numAleatoire);
             }
@@ -40,7 +40,7 @@ const changeCards = async () => {
 
         // affiche les cartes correspondantes
         indicesAleatoires.forEach(index => {
-            let randomCharacter = data[index];
+            let randomCharacter = data[index]; 
             afficherCarte(randomCharacter);
         });
     }
@@ -64,9 +64,7 @@ function ouvrirPack(event) {
 function afficherCarte(carte) {
     const cartesContainer = document.getElementById('cartesContainer');
 
-    if (!(carte.image && carte.name)) {
-        console.error('Propriété "image" ou "name" manquante dans l\'objet carte', carte);
-        return;
+    if (!(carte.image && carte.name && carte.slug)) {
     }
 
     const carteinfo = document.createElement('div');
@@ -77,11 +75,23 @@ function afficherCarte(carte) {
     carteinfo.appendChild(imageinfo);
 
     const nomCarte = document.createElement('p');
-    carteinfo.classList.add('nomCartePageIndex2');
+    carteinfo.classList.add('nomCartePage2');
     nomCarte.textContent = carte.name;
     carteinfo.appendChild(nomCarte);
 
-    cartesContainer.appendChild(carteinfo);
+    const cartesInventaire = JSON.parse(localStorage.getItem('cartesInventaire')) || [];
+
+    // Vérifier si la carte est déjà dans l'inventaire
+    const carteDejaPresente = cartesInventaire.some(item => item.carte === carte.image ===carte.slug);
+
+    if (!carteDejaPresente) {
+        // Ajout de la carte à l'inventaire avec le slug
+        cartesInventaire.push({ carte: carte.image, favori: false, slug: carte.slug });
+        localStorage.setItem('cartesInventaire', JSON.stringify(cartesInventaire));
+        cartesContainer.appendChild(carteinfo);
+    } else {
+        console.log("La carte est déjà dans l'inventaire.");
+    }
 }
 
 

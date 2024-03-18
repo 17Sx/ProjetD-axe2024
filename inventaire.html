@@ -4,12 +4,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>
-        <img class="logoh1" src="Preview/Plan de travail 1.png" alt="Image logo">
-        <a class="hdr" href="inventaire.html"> Inventaire </a>
-        <a class="hdr" href="https://discord.gg/3x3kGZTbC7"> Discord </a>
-    </h1>
-
+    <!--Header et ces boutons-->
+    <header>
+        <img class="logoh1"  id="commun" src="Preview/Plan de travail 1.png" alt="Image logo">
+        <a class="hdr" id="commun"   href="inventaire.html"> Inventaire </a>
+        <a class="hdr"  id="commun"  href="https://discord.gg/3x3kGZTbC7"> Discord </a>
+    </header>
+    <!--Choix de la maison pour le filtre-->
     <div>
         <label for="choixMaison">Choix de la maison :</label>
         <select id="choixMaison" name="choixMaison">
@@ -22,7 +23,9 @@
     </div>
 
     <div class="center" id="cartesContainer"></div>
-
+    <div id="infoMenu"></div>
+    
+<!--Bouton permettant les echanges de cartes entre inventaires-->
     <img onclick="afficherContenu()" class="btnecg" src="img/echange.png" alt="btn echange">
     <div class="btnflott" id="btnflott">
         <form id="echangecrt">
