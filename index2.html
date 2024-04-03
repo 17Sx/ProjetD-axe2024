@@ -6,7 +6,7 @@
 <body>
 <!--Header et ces boutons-->
     <header>
-        <img class="logoh1" src="Preview/Plan de travail 1.png" alt="Image logo">
+        <img class="logoh1" src="img/Logo.png" alt="Image logo">
         <a class="hdr" href="inventaire.html"> Inventaire </a>
         <a class="hdr" href="https://discord.gg/3x3kGZTbC7"> Discord </a>
     </header>
@@ -20,7 +20,8 @@
     <!--Bouton permettant les echages de cartes-->
     <img onclick="afficherContenu()" class="btnecg" src="img/echange.png" alt="btn echange">
 
-    <div class="btnflott" id="btnflott">
+    <div class="btnflott popup" id="btnflott">
+            <span class="close-btn">&times;</span>
         <form id="echangecrt">
             <div class="ecg">
                 <label for="nom">Son nom:</label>
@@ -30,9 +31,9 @@
                 <label for="email">Son email :</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            <div>
+            <div class="ecg">
                 <label for="choixCarte">Choix de votre carte a echanger :</label>
-                <input id="choixCarte" name="choixCarte" required>
+                <input  type="text" id="choixCarte" name="choixCarte" required>
             </div>
             <button class="btn" type="submit">Envoyer demande</button>  
         </form>

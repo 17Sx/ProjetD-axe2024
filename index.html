@@ -9,55 +9,58 @@
 <body>
     <!--Header et ces boutons-->
 <header>
-    <img class="logoh1" src="Preview/Plan de travail 1.png" alt="Image logo">
-    <a class="hdr" href="inventaire.html"> Inventaire </a>
-    <a class="hdr" href="https://discord.gg/3x3kGZTbC7"> Discord </a>
+    <img class="logoh1" src="img/Logo.png" alt="Image logo">
+    <a class="hdr" id="glow-button" href="inventaire.html"> Inventaire </a>
+    <a class="hdr" id="glow-button" href="https://discord.gg/3x3kGZTbC7"> Discord </a>
     
     
 </header>
 <main>
-<!--Formulaire d'inscription-->
-<div class="forms">
-    <form id="contact">
-    <div class="grp">
-        <label for="nom">Nom:</label>
-        <input type="text" id="nom" name="nom" required>
+    <div class="welcome-container">
+        <h2 class="bvn"> Bienvenue Sur Harry Card's ! </h2>
+    
+        <!--Formulaire d'inscription-->
+        <div class="forms">
+            <form id="contact">
+                <div class="grp">
+                    <label for="nom">Pseudo :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Pseudo" required>
+                </div>
+                <div class="grp">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password"placeholder="Mot De Passe">
+                    <div id="mdpError"></div>
+                </div>
+                <button id="inscriptionButton" class="btn" type="submit">S'inscrire</button>  
+            </form>
+        </div>
     </div>
-    <div class="grp">
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password">
-        <div id="mdpError"></div>
-    </div>
-    <button id="inscriptionButton" class="btn" type="submit">S'inscrire</button>  
-</form>
-</div>
 </main>
 <!--Footer et ces infromations-->
 <footer>
-
-
-    
     <div class="footercontent">   
         <div class="info">
             <h2>A propos de nous</h2>
-            <p></p>
+            <li><a href="Apropos.html" class="linktolink" >Tout Savoir</a></li>
         </div>
         <div class="link">
             <h2>Liens Utiles</h2>
-            <li ><a class="linktolink" href="twitter.com">Notre Twitter</a></li>
-            <li ><a class="linktolink" href="youtube.com">Notre Youtube</a></li>
-            <li><a class="linktolink" href="facebook.com">Notre Facebook</a></li>
+            <ul>
+                <li><a class="linktolink" href="twitter.com">Notre Twitter</a></li>
+                <li><a class="linktolink" href="youtube.com">Notre Youtube</a></li>
+                <li><a class="linktolink" href="facebook.com">Notre Facebook</a></li>
+            </ul>
         </div>
         <div class="contact">
             <h2>Contact</h2>
             <p>Harry.Card'sGame@fakeemail.com</p>
         </div>
     </div> 
-    </footer>
+</footer>
 <script src="JS/js.js"></script>
 </body>
 </html>

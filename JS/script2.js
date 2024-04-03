@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const echangeForm = document.getElementById('echangecrt');
     echangeForm.addEventListener('submit', envoyerDemande);
+
+    const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', fermerPopup);
 });
 
 let ouvrirPackButton = document.getElementById("ouvrirPackButton");
@@ -98,7 +101,15 @@ function afficherCarte(carte) {
 function afficherContenu() {
     var contenu = document.getElementById("btnflott");
     contenu.style.display = "block";
+    contenu.classList.add("popup"); 
 }
+
+function fermerPopup() {
+    var contenu = document.getElementById("btnflott");
+    contenu.style.display = "none"; 
+}
+
+
 
 function envoyerDemande(event) {
     event.preventDefault();
