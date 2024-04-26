@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./../../style.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div class="welcome-container">
+                <h2 class="bvn"> Bienvenue Sur Harry Card's ! </h2>
+            
+                <!-- Formulaire d'inscription -->
+                <div class="forms">
+                    <form id="contact">
+                        <div class="grp">
+                            <label for="pseudo">Pseudo :</label>
+                            <input type="text" id="pseudo" name="pseudo" placeholder="pseudo" required>
+                        </div>
+                        <div class="grp">
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" placeholder="email" required>
+                        </div>
+                        <div>
+                            <label for="password">Mot de passe :</label>
+                            <input type="password" id="password"placeholder="Mot De Passe">
+                            <div id="mdpError"></div>
+                        </div>
+                        <div>
+                            <label for="maison">maison :</label>
+                            <select id="maison" name="maison">
+                                <option value="serpentard">serpentard</option>
+                                <option value="gryfondor">gryfondor</option>
+                                <option value="serdaigne">serdaigle</option>
+                                <option value="poufsouffle">poufsouffle</option>
+                            </select>
+                        </div>
+                        <button id="inscriptionButton" class="btn" type="submit">S'inscrire</button>  
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

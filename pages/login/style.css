@@ -376,18 +376,3 @@ p {
   font-size: 20px;
   color: #fff;
 }
-
-#welcomeMessage {
-  display: inline; 
-  margin-right: 15px; 
-  color: #ffffff;
-}
-
-.nameuser {
-  color: rgb(78, 18, 182); 
-}
-
-.maison {
-  color: rgba(255, 200, 0, 0.688); 
-}
-
