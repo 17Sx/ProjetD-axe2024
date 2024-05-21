@@ -1,0 +1,177 @@
+.burger-menu {
+display: none;
+position: absolute;
+top: 20px;
+right: 20px;
+cursor: pointer;
+z-index: 1001;
+}
+
+.burger-menu span {
+background-color: #fff;
+display: block;
+width: 25px;
+height: 3px;
+margin-bottom: 5px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.popup-content {
+    color: white;
+}
+
+.close-btni {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    margin-bottom: 5px;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+}
+
+
+.nav-menu {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+
+.nav-menu a {
+text-decoration: none;
+color: #fff;
+margin: 0 20px;
+}
+
+.carte{
+    transition: all 0.25s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+.hdr a {
+    display: none;
+}
+
+.burger-menu {
+    display: block;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 150px;
+    background-color: #120138;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+    z-index: 1000;
+}
+
+.nav-menu a {
+    margin: 10px 0;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+}
+
+
+@media screen and (max-width: 768px){
+    #welcomeMessage{
+        display: none;
+    }
+}
+
+.myPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 900;
+}
+
+.myPopup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.myPopup .popup-contenti {
+    text-align: left;
+}
+
+.myPopup .popup-contenti img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(81, 0, 255, 0.43);
+    position: absolute;
+}
+
+
+
+.imgpopup{
+    width: 20%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #5100ff6e;
+    position: absolute;
+}
+
+#cartesContainer {
+    display: flex;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: white;
+}

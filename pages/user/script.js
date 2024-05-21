@@ -4,7 +4,7 @@ if(!token) {
     window.location.href = './../login/index.html';
 }
 
-fetch("http://192.168.1.66:3000/users",{
+fetch("http://192.168.1.20:3000/users",{
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -22,5 +22,11 @@ fetch("http://192.168.1.66:3000/users",{
 
     
 })
+
+
+function toggleMenu() {
+    var menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+}
 
 

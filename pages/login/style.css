@@ -1,15 +1,7 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-main {
-  flex: 1; 
-}
+/* Styles liés à la page HTML */
 
 /*Permet de modifier le visuel des cartes*/
-.nomCartePage2{
+.nomCartePage2 {
   text-decoration: none;
   padding: 10px;
   font-size: 0.9em;
@@ -20,9 +12,39 @@ main {
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);  
 }
 
+.custom-cursor{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  pointer-events: none;
+  z-index: 999;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.custom-cursor-before{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.275);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 10000;
+  opacity: 1;
+  pointer-events: none; 
+
+}
+
 /*Body*/
 body {
-  background-image: url(img/backkk.png);
+  background-image: url(../../img/backkk.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -36,8 +58,8 @@ body {
   width: 100%;
   margin: 0px;
   min-height: 100vh; 
-
 }
+
 /*Formulaire d'inscription*/
 form {
   width: 400px;  
@@ -48,19 +70,15 @@ form {
 } 
 
 form label {
-  color : #ffffff;
-
+  color: #ffffff;
 }
-
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
-
 
 /*Permet de modifier les form*/
 label {
@@ -70,6 +88,7 @@ label {
   font-weight: bold;
   color: #333;
 }
+
 /*Tout les section email dans les forms*/
 input[type="text"], input[type="email"], select {
   width: 100%;
@@ -80,8 +99,9 @@ input[type="text"], input[type="email"], select {
   box-sizing: border-box;
   font-size: 14px;
 }
+
 /*Toute les sections mdp dans les forms*/
-input[type="password"], input[type="mdp"], select{
+input[type="password"], input[type="mdp"], select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -89,7 +109,6 @@ input[type="password"], input[type="mdp"], select{
   border-radius: 100px;
   box-sizing: border-box;
   font-size: 14px;
-
 }
 
 /*Modifie les bouton pour s'inscrire et envoyer demmande d'echange */
@@ -102,26 +121,17 @@ input[type="password"], input[type="mdp"], select{
   border-radius: 100px;
   cursor: pointer;
   font-size: 14px;
-  &:hover{
-      transition: all 0.5s;
-      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
-    }
-  }
-
-.choixCarte{
-  border-radius: 10px;
 }
 
-  .welcome-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; 
-    transform: translateY(50px); 
-}
-
-.forms {
-  margin-top: 40px; 
+input[type="submit"]{
+  width: 100%;
+  padding: 10px;
+  background-color: #0a0020;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .bvn {
@@ -147,7 +157,6 @@ header {
   border-bottom: 2px solid white ;
 }
 
-
 /*Modifie le footer*/
 footer {
   width: 100%;
@@ -161,218 +170,45 @@ footer {
   border-top: 2px solid white ;
 }
 
-.footercontent {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
-}
 
-.info, .link, .contact {
-  flex: 1;
-  padding: 0 20px; 
-}
-
-h2 {
-  color: #fff;
-  margin-bottom: 10px; 
-}
-
-p {
-  color: #ccc; 
-  margin-bottom: 10px; 
-}
-
-.linktolink {
-  text-decoration: none;
-  color: #fff;
-}
-
-.linktolink:hover {
-  color: #ccc; 
-}
-
-
-.linktolink{
-  text-decoration: none;
-  color: #ffffff;
-  &:hover {
-    color: gray;
-  }
-}
-
-/*Taille du logo dans le header*/
-.logoh1{
-  width: 200px;
-  height: 100px;
-}
-
-/*Pack booster affichée sur la page index2*/
-.ovrt {
-  height: 500px;
-  width: 600px;
-  background-image: url(img/sasa.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; 
-}
-
-.commun{
-  margin-right: 100%;
-}
-
-
-/*Bouton dans le Header*/
-
-.hdr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10%;
-  width: 100px;
-  height: 70px;
-  background-color: #120138;
-  color: #ffffff;
-  text-decoration: none;
-  margin: 50px;
-  position: relative; 
-}
-
-.hdr:hover {
-  transition: all 0.5s;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
-}
-
-/*zone d'affichage de carte*/
-#cartesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.carte {
-  width: 125px;
-  height: auto;
-  margin: 50px;
-  background-color: #120138;
-  border-radius: 20px;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
-}
-
-
-/*Ce qui permet de limiter la zone d'affichage des cartes dans l'inventaire*/
-.center{
-  width: 70vw;
-  background-color: #ffffff;
+/* Responsive */
+@media only screen and (max-width: 480px) {
+  form {
+      width: 95%; 
+      padding: 15px; 
   }
 
-/*bouton pour les echanges*/
-.btnflott {
-    display: none;
-}
-/*bouton pour les echanges*/
-.btnecg {
-  background-color: #7e2198;
-  border-radius: 80%;
-  height: 5vw;
-  width: auto;
-  padding: 10px;
-  position: fixed; 
-  bottom: 0; 
-  left: 0; 
-  margin-bottom: 20px; 
-  margin-left: 20px; 
-  z-index: 999; 
-  animation: glow 2s infinite;
-}
-
-/* Animation pour changer la couleur du glow */
-@keyframes glow {
-  0% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); } 
-  25% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); } 
-  50% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); } 
-  75% { box-shadow: 0 0 10px rgba(255, 255, 0, 0.5); } 
-  100% { box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
-}
-
-
-/*bouton pour ouvrir un pack*/
-.btn5 {
-  text-decoration: none;
-  padding: 10px;
-  font-size: 0.9em;
-  color: #ffffff;
-  background-color: #120138;
-  border-radius: 24px;
-  position: absolute; 
-  bottom: 20px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  z-index: 1; 
-  &:hover {
-    transition: all 0.5s;
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
-  }
-}
-
-
-/*image des cartes dans l'inventaire*/
-.carte img {
-  background-color: #120138;
-  box-sizing: border-box; 
-  border-radius: 5px;
-  width: 100px;
-  height: 150px;
-  object-fit: cover;
-  margin: 0 auto; 
-  display: block; 
-  border-radius: 20px;
-}
-
-
-
-/*bouton favoris*/
-.favori-button {
-  background-color: transparent;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 10px auto; 
-  display: block; 
-
-}
-
-.favori-button:hover {
-  color: #ff6b6b; 
-}
-
-  .clicked{
-    color: red;
+  .bvn {
+      font-size: 12px; 
+      padding: 6px; 
+      text-align: center; 
+      margin: auto; 
   }
 
-
-  .popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 1000;
+  input[type="text"], input[type="email"], input[type="password"], select {
+      width: calc(100% - 20px); 
+      padding: 10px; 
+      margin-bottom: 10px; 
   }
-  
-  .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  color: #fff;
+
+  .btn {
+      font-size: 10px; 
+      padding: 8px; 
+  }
+
+  #change-password-form {
+    width: 70%; 
+    padding: 15px; 
+  }
+
+  input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    margin-bottom: 10px; 
+  }
+
+  input[type="submit"] {
+    font-size: 10px; 
+    padding: 8px; 
+  }
 }

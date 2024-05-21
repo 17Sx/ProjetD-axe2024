@@ -4,12 +4,42 @@
   margin: 0;
 }
 
+.custom-cursor{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  pointer-events: none;
+  z-index: 99999;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.custom-cursor-before{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.275);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 1000099;
+  opacity: 1;
+  pointer-events: none; 
+}
+
 main {
   flex: 1; 
 }
 
 /*Permet de modifier le visuel des cartes*/
 .nomCartePage2{
+  cursor: pointer;
   text-decoration: none;
   padding: 10px;
   font-size: 0.9em;
@@ -22,13 +52,14 @@ main {
 
 /*Body*/
 body {
+  cursor: none;
   background-image: url(img/backkk.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-color: #acacac;
   background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-seri;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +69,7 @@ body {
   min-height: 100vh; 
 
 }
+
 /*Formulaire d'inscription*/
 form {
   width: 400px;  
@@ -145,34 +177,110 @@ header {
   justify-content: flex-start; 
   align-items: center; 
   border-bottom: 2px solid white ;
+  margin: auto;
 }
 
 
-/*Modifie le footer*/
+/* Footer */
 footer {
-  width: 100%;
-  height: auto;
   background-color: #120138;
   color: #fff;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px 0;
-  box-sizing: border-box; 
-  border-top: 2px solid white ;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 2px solid white;
 }
 
 .footercontent {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.info, .link, .contact {
-  flex: 1;
-  padding: 0 20px; 
+.social-links {
+  margin: 20px 0;
 }
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-menu {
+  margin: 20px 0;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.footer-menu a:hover {
+  color: #ccc;
+}
+
+.footer-bottom {
+  margin: 20px 0;
+}
+
+.footer-bottom p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+
+.link {
+  text-align: center; 
+}
+
+.link ul {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 20px; 
+  margin: 20px;
+}
+
+.link ul li {
+  list-style: none;
+  margin: 0 10px; 
+}
+
+.link img {
+  width: 40px;
+  height: 40px;
+}
+
+.info,
+.contact {
+  flex: 1;
+  text-align: center; 
+}
+
+.info h2,
+.contact h2 {
+  font-size: 1.2em;
+}
+
+.info p a{
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: grey; 
+    transition: all 1s;
+  }
+}
+
+
 
 h2 {
   color: #fff;
@@ -210,13 +318,17 @@ p {
 
 /*Pack booster affichée sur la page index2*/
 .ovrt {
-  height: 500px;
-  width: 600px;
+  height: 700px;
+  width: 800px;
   background-image: url(img/sasa.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; 
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
 }
+
 
 .commun{
   margin-right: 100%;
@@ -244,22 +356,18 @@ p {
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
 }
 
-/*zone d'affichage de carte*/
-#cartesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: transparent;
-}
+
 
 .carte {
-  width: 125px;
+  width: 180px;
   height: auto;
   margin: 50px;
   background-color: #120138;
   border-radius: 20px;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
 }
+
+
 
 
 /*Ce qui permet de limiter la zone d'affichage des cartes dans l'inventaire*/
@@ -302,14 +410,14 @@ p {
 .btn5 {
   text-decoration: none;
   padding: 10px;
-  font-size: 0.9em;
+  font-size: 2em;
   color: #ffffff;
   background-color: #120138;
   border-radius: 24px;
   position: absolute; 
   bottom: 20px; 
   left: 50%; 
-  transform: translateX(-50%); 
+  transform: translateX(20%); 
   z-index: 1; 
   &:hover {
     transition: all 0.5s;
@@ -320,7 +428,6 @@ p {
 
 /*image des cartes dans l'inventaire*/
 .carte img {
-  background-color: #120138;
   box-sizing: border-box; 
   border-radius: 5px;
   width: 100px;
@@ -329,44 +436,28 @@ p {
   margin: 0 auto; 
   display: block; 
   border-radius: 20px;
+  background-color: #0b0665;
+  margin-top: 10px;
 }
-
-
-
-/*bouton favoris*/
-.favori-button {
-  background-color: transparent;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 10px auto; 
-  display: block; 
-
-}
-
-.favori-button:hover {
-  color: #ff6b6b; 
-}
-
-  .clicked{
-    color: red;
-  }
-
 
   .popup {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    right: 0; 
+    transform: translateX(100%); 
+    transition: transform 0.5s ease; 
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    z-index: 1000;
-  }
+    z-index: 998;
+}
+
+.popup.show {
+  transform: translateX(-175%); 
+  
+}
   
   .close-btn {
   position: absolute;
@@ -378,9 +469,15 @@ p {
 }
 
 #welcomeMessage {
-  display: inline; 
-  margin-right: 15px; 
+  border: 1px solid #ffffff23;
+  backdrop-filter: blur(10px);
+  padding: 50px;
   color: #ffffff;
+  border-radius: 50px;
+}
+
+.spacer {
+  height: 50px;
 }
 
 .nameuser {
@@ -391,3 +488,111 @@ p {
   color: rgba(255, 200, 0, 0.688); 
 }
 
+p {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  }
+  
+  .burger-menu span {
+  background-color: #fff;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  }
+  
+  .nav-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  }
+  
+  .nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+
+  .ovrt{
+    height: 500px;
+    width: 600px;
+  }
+
+  .hdr a {
+      display: none;
+  }
+  
+  .burger-menu {
+      display: block;
+  }
+  
+  .nav-menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 150px;
+      background-color: #120138;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+      z-index: 1000;
+  }
+  
+  .nav-menu a {
+      margin: 10px 0;
+  }
+  
+  .nav-menu.active {
+      display: flex;
+  }
+  }
+  
+
+  .myPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 900;
+}
+
+.myPopup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.myPopup .popup-content {
+    text-align: left;
+}
+
+.myPopup .popup-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(81, 0, 255, 0.43);
+    position: absolute;
+}

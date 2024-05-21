@@ -57,5 +57,21 @@ const login = async (req, res) => {
     }
 };
 
-export {signup, login} ;
+const changepassword = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = await prisma.user.update({
+            where: { email: email },
+            data: {
+                password: hashedPassword
+            }
+        });
+        res.json(user);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+};
+
+export {signup, login, changepassword} ;
 

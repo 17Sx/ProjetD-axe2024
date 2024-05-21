@@ -1,0 +1,87 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+p{
+    color: black;
+}
+
+/* Détails du personnage */
+#character-details {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#character-details h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#character-details img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    border: 5px solid #5100ff6e;
+}
+
+#character-details img:hover {
+    transform: scale(1.05);
+}
+
+#character-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#character-details p strong {
+    font-weight: bold;
+}
+
+/* Custom cursor styles */
+.custom-cursor,
+.custom-cursor-before {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #282c34;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-menu a {
+        color: #fff;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+}

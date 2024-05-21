@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Card's AllCard's</title>
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="allcards.css">
+
+</head>
+<body>
+
+    <div class="custom-cursor" ></div>
+<div class="custom-cursor-before"></div>
+    
+<!--Header et ces boutons-->
+<header>
+    <img class="logoh1" src="./../../img/Logo.png" alt="Image logo">
+    <!-- Bouton du menu burger -->
+    <div class="burger-menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+    <!-- Fin du bouton du menu burger -->
+    <nav class="nav-menu">
+    <a class="hdr" href="./../user/index.html">Acceuil</a>
+    <a class="hdr" href="https://discord.gg/3x3kGZTbC7">Discord</a>
+    <a class="hdr" href="inventaire.html"> Inventaire </a>
+</nav>
+</header>
+
+<div class="dynamicsearch">
+
+    <h1>Faite votre propre recherche !</h1>
+
+    <input class="searchinput" type="text">
+</div>
+
+
+
+<h1 class="lsp">Liste des Personnages</h1>
+<div class="characters" id="characters"></div>
+
+
+
+<div class="popup" id="popup">  
+    <div class="popup-content" id="popup-content"></div>
+    <button class="close-btn" id="close-btn">X</button>
+</div>
+
+
+<footer>
+    <div class="footercontent">
+        <div class="social-links">
+            <a href="https://facebook.com"><img src="../../img/FooterIcon/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="../../img/FooterIcon/twitter.png" alt="Twitter"></a>
+            <a href="https://linkedin.com"><img src="../../img/FooterIcon/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://instagram.com"><img src="../../img/FooterIcon/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>©2024 Harry's Card's | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="allcards.js" ></script>
+<script src="../../alljs.js" ></script>
+</body>
+</html>

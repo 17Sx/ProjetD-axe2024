@@ -1,0 +1,197 @@
+.allcards {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #120138;
+    border-radius: 24px;
+    position: absolute; 
+    transform: translateX(-50%); 
+    z-index: 1; 
+    left: 80%;
+    margin-top: 160px;
+    &:hover {
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
+    }
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.fav-card{
+    box-shadow: 0 0 10px 5px rgba(255, 221, 0, 0.7);
+}
+
+h1{
+    color: #ffffff;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"]{
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 1px solid #5100ff;
+    box-sizing: border-box;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dynamicsearch {
+    width: 50%;
+}
+
+
+.choixMaison {
+    margin-left: 20px; 
+    width: 20%;
+}
+
+label {
+    font-size: 1.2em;
+    color: #f8f8f8;
+    margin-top: 20px;
+}
+
+.carte {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    perspective: 1000px;
+}
+
+
+
+#cartesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.carte-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.15s ease-out;
+}
+
+
+
+.glow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    transition: all 0.15s ease-out;
+    border-radius: 25px;
+    mix-blend-mode: hard-light;
+        top: 10px;
+    right: 10px;
+    z-index: -1
+}
+
+#cartesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+    perspective: 10000px;
+}
+
+.favbtn {
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease; 
+    margin-top: 10px; 
+    
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+}
+
+.favbtn:hover {
+    color: red; 
+}
+
+.clicked{
+    color: red;
+}
+
+.nomCarte {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.fade-in {
+    opacity: 0; 
+    animation: fade-in 1s ease forwards; 
+}
+
+
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .cartedispo .allcards {
+        display: none;
+    }
+
+    h1{
+        display: none;
+    }
+
+    .btnecg{
+        height: 15vw;
+    }
+
+    .footercontent {
+        display: block;
+        
+    }
+
+    .link{
+        margin-bottom: 20px;
+}
+
+    .info{
+        margin-top: 20px;
+    }
+
+
+    .contact{
+        display: none;
+    }
+    
+}
+

@@ -30,25 +30,41 @@ const GetUsers = (req, res) => {
 
 
 
-const AddToInventory = (req, res) => {
-    let id = Number(req.params.id);
-    let item = req.body.item;
-    prisma.user.update({
-        where: { id: id },
-        data: {
-            inventory: {
-                push: item
+const AddToInventory = async (req, res) => {
+    let userId = Number(req.params.id);
+    let card = req.body.card; 
+
+    try {
+        const inventoryItem = await prisma.inventory.create({
+            data: {
+                userId: userId,
+                card: card
             }
-        }
-    }).then((user) => { res.json(user); })
+        });
+        res.json(inventoryItem);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Erreur lors de l'ajout à l'inventaire" });
+    }
 };
 
-const getInventory = (req, res) => {
-    let id = Number(req.params.id);
-    prisma.user.findUnique({
-        where: { id: id }
-    }).then((user) => { res.json(user.inventory); });
+
+const getInventory = async (req, res) => {
+    let userId = Number(req.params.id);
+
+    try {
+        const inventory = await prisma.inventory.findMany({
+            where: {
+                userId: userId
+            }
+        });
+        res.json(inventory);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Erreur lors de la récupération de l'inventaire" });
+    }
 };
+
 
 
 export { GetUsers, AddToInventory, getInventory };

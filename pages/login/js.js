@@ -2,17 +2,30 @@
 let form = document.querySelector('form');
 console.log(form);
 
+let storedEmail = localStorage.getItem('email');
+let storedPassword = localStorage.getItem('password');
+
+if (storedEmail && storedPassword) {
+    document.getElementById('email').value = storedEmail;
+    document.getElementById('password').value = storedPassword;
+}
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
     let email = document.getElementById('email').value
     let mdp = document.getElementById('password').value
+
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', mdp);
   
     const data = {
   
         email:email, 
         password:mdp}
+
+        
     //console.log(data)
-    fetch('http://192.168.1.66:3000/auth/', {
+    fetch('http://192.168.1.20:3000/auth', {
         method: "POST", 
         headers: {
           "Content-Type": "application/json",

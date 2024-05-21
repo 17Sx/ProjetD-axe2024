@@ -14,7 +14,7 @@ form.addEventListener('submit', (e)=>{
         email:email, 
         password:mdp, 
         maison :maison}
-    fetch('http://192.168.1.66:3000/auth/signup', {
+    fetch('http://192.168.1.20:3000/auth/signup', {
         method: "POST", 
         headers: {
         "Content-Type": "application/json",
