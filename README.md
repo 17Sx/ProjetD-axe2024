@@ -24,7 +24,8 @@
   ![Prisma](https://img.shields.io/badge/Prisma-%23000000?style=for-the-badge&logo=prisma&logoColor=white)
 
 - **Database**:
-  ![Prisma](https://img.shields.io/badge/Prisma-%23000000?style=for-the-badge&logo=prisma&logoColor=white)
+  ![SQL](https://img.shields.io/badge/SQL-%234479A1?style=for-the-badge&logo=sql&logoColor=white)
+
 
 - **Tools**:
   ![.env](https://img.shields.io/badge/.env-%23000000?style=for-the-badge&logo=.env&logoColor=white)
